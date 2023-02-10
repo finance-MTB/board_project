@@ -8,24 +8,31 @@ const data = createSlice({
       title: "세번째글",
       user: "park",
       content: "세번째 글내용입니다.",
-      date: "2023-01-03",
+      date: "2023-2-03",
     },
     {
       title: "두번째글",
       user: "lee",
       content: "두번째 글내용입니다.",
-      date: "2023-02-01",
+      date: "2023-1-29",
     },
     {
-      
       title: "첫번째글",
       user: "kim",
       content: "첫번째 글내용입니다.",
-      date: "2023-02-06",
+      date: "2023-1-06",
     },
-  ]
+  ],
+  reducers : {
+    addData(state, action){
+      state.unshift(action.payload);
+      console.log(state)
+    }
+  }
 });
 
+
+export const {addData} = data.actions
 export default configureStore({
   reducer: {
     data : data.reducer

@@ -21,11 +21,13 @@ div{
   transition: all 1s;
   opacity: 0;
 }
-.modal-bg {
-  background: white;
-  border-radius: 5px;
-  padding: 30px;
-} 
+.float-right{
+  float: right;
+  position: relative;
+  bottom: 46px;
+  right: 40px;
+  width: 90px;
+}
 .white-bg{
   background-color: white;
   width: 1000px;
@@ -33,6 +35,9 @@ div{
   margin: auto;
   margin-top: 70px;
   border-radius: 10px;
+}
+.writeForm{
+  padding: 20px;
 }
 .tableHeight{
   height: 420px;
