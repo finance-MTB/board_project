@@ -26,7 +26,6 @@ const data = createSlice({
   reducers : {
     addData(state, action){
       state.unshift(action.payload);
-      console.log(state)
     }
   }
 });

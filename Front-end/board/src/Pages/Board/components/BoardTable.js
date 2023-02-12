@@ -1,11 +1,9 @@
-import React from 'react'
-import Table from 'react-bootstrap/Table';
+import React from "react";
+import Table from "react-bootstrap/Table";
+import { Link } from "react-router-dom";
 
-const BoardTable = ({
-  data
-}) => (
-  <div className='tableHeight'>
-    
+const BoardTable = ({ data }) => (
+  <div className="tableHeight">
     <Table striped>
       <thead>
         <tr>
@@ -14,6 +12,7 @@ const BoardTable = ({
           <th>Date</th>
         </tr>
       </thead>
+      
       <tbody>
         {data.map((a, index) => (
           <tr key={index}>
@@ -25,6 +24,6 @@ const BoardTable = ({
       </tbody>
     </Table>
   </div>
-)
+);
 
-export default BoardTable
+export default BoardTable;

@@ -7,6 +7,7 @@ function BoardContainer() {
   //redux store에 있는 data를 받아옴
   const data = useSelector((state) => { return state.data } )
   //console.log(data)
+  
   return (
     <BoardPresenter
     data={data}
