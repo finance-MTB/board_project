@@ -3,7 +3,7 @@ import Table from "react-bootstrap/Table";
 
 
 const BoardTable = ({ 
-  data,
+  boardlist,
   navigateView
 }) => (
   <div className="tableHeight">
@@ -17,11 +17,11 @@ const BoardTable = ({
       </thead>
       
       <tbody>
-        {data.map((a, index) => (
-          <tr key={index} onClick={navigateView}>
-            <td>{data[index].title}</td>
-            <td>{data[index].user}</td>
-            <td>{data[index].date}</td>
+        {boardlist.map((board, index) => (
+          <tr key={index} onClick={navigateView(board.id)}>
+            <td>{board.title}</td>
+            <td>{board.user}</td>
+            <td>{board.date}</td>
           </tr>
         ))}
       </tbody>

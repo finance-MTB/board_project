@@ -1,15 +1,20 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Board from "../Pages/Board";
-import Write from "../Pages/Write"
-import BoardView from "../Component/BoardView";
+import Write from "../Pages/Write";
+import BoardView from '../Pages/BoardView';
 
 function Router() {
+  const navigte = useNavigate();
+  useEffect(() => {
+    navigte("/board");
+  }, []);
+
   return (
     <Routes>
-      <Route path="/" element={<Board />} />
+      <Route path="/board" element={<Board />} />
       <Route path="/write" element={<Write />} />
-      <Route path="/view" element={<BoardView />} />
+      <Route path="/view/:id" element={<BoardView />} />d
     </Routes>
   );
 }

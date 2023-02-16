@@ -4,18 +4,21 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
   {
+    id: 0,
     title: "세번째글",
     user: "park",
     content: "세번째 글내용입니다.",
     date: "2023-2-03",
   },
   {
+    id: 1,
     title: "두번째글",
     user: "lee",
     content: "두번째 글내용입니다.",
     date: "2023-1-29",
   },
   {
+    id: 2,
     title: "첫번째글",
     user: "kim",
     content: "첫번째 글내용입니다.",
@@ -35,10 +38,24 @@ const data = createSlice({
   reducers,
 });
 
+// const id = createSlice({
+//   name : 'id',
+//   initialState: {id:0},
+//   reducers: {
+//     addid(state){
+//       state.id++
+//       console.log(state.id)
+//     }
+//   }
+
+// })
+
 export const { addData } = data.actions;
+//export const { addid } = id.actions;
 
 export default configureStore({
   reducer: {
     data: data.reducer,
+    //id: id.reducer
   },
 });
