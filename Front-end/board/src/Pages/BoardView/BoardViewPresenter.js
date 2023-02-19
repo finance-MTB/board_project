@@ -2,19 +2,18 @@ import React from 'react'
 
 const BoardViewPresenter = (
   {
-    boardlist,
-    id
+    boardlist
   }
 ) => (
   
   <div>
     <div>
-      <h2>{boardlist[id].title}</h2>
-      <p>{boardlist[id].user}</p>
+      <h2>{boardlist.title}</h2>
+      <p>userId : {boardlist.userId}</p>
     </div>
 
     <div>
-      <p>{boardlist[id].content}</p>
+      <p>{boardlist.body}</p>
     </div>
   </div>
 )

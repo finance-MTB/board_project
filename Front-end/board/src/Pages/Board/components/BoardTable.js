@@ -5,23 +5,26 @@ import Table from "react-bootstrap/Table";
 const BoardTable = ({ 
   boardlist,
   navigateView
+  //API: userid , id, title, body
+
 }) => (
   <div className="tableHeight">
     <Table striped>
       <thead>
         <tr>
+          <th>#</th>
           <th>title</th>
           <th>User</th>
-          <th>Date</th>
+          
         </tr>
       </thead>
       
       <tbody>
-        {boardlist.map((board, index) => (
-          <tr key={index} onClick={navigateView(board.id)}>
+        {boardlist.map((board) => (
+          <tr key={board.id} onClick={navigateView(board.id)}>
+            <td>{board.id}</td>
             <td>{board.title}</td>
-            <td>{board.user}</td>
-            <td>{board.date}</td>
+            <td>{board.userId}</td>
           </tr>
         ))}
       </tbody>

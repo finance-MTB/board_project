@@ -28,6 +28,9 @@ div{
   right: 40px;
   width: 90px;
 }
+.th-max{
+  max-width: 100;
+}
 .white-bg{
   background-color: white;
   width: 1000px;

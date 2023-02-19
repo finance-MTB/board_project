@@ -44,7 +44,7 @@ const WritePresenter = ({
             />
           </Form.Group>
 
-          <Link to="/board">
+          <Link>
             <Button variant="primary" onClick={onClickAddBtn}>
               글쓰기
             </Button>
