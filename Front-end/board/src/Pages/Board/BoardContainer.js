@@ -7,9 +7,12 @@ import BoardPresenter from "./BoardPresenter.js";
 
 function BoardContainer() {
   //redux store에 있는 data를 받아옴
-  const boardlist = useSelector((state) => {
+  const loadlist = useSelector((state) => {
+    
     return state.data;
   });
+  const boardlist = loadlist.slice().reverse()
+  
   const navigate = useNavigate();
   //console.log(data)
 
