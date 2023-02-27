@@ -4,7 +4,8 @@ import Table from "react-bootstrap/Table";
 
 const BoardTable = ({ 
   boardlist,
-  navigateView
+  navigateView,
+  currentBoardlist
 }) => (
   <div className="tableHeight">
     <Table striped>
@@ -17,7 +18,7 @@ const BoardTable = ({
       </thead>
       
       <tbody>
-        {boardlist.map((board, index) => (
+        {currentBoardlist.map((board, index) => (
           <tr key={index} onClick={navigateView(board.id)}>
             <td>{board.title}</td>
             <td>{board.user}</td>

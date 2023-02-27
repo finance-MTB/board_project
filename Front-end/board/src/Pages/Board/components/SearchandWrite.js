@@ -6,17 +6,22 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const SearchandWrite = () => (
+const SearchandWrite = (
+  {
+  onClickMenu,
+  menu
+}
+) => (
   <div>
     <InputGroup className="display-center mb-2 w-50">
       <DropdownButton
         variant="outline-secondary"
-        title="글제목"
+        title= {menu}
         id="input-group-dropdown-1"
       >
-        <Dropdown.Item href="#">글제목</Dropdown.Item>
-        <Dropdown.Item href="#">작성자</Dropdown.Item>
-        <Dropdown.Item href="#">글내용</Dropdown.Item>
+        <Dropdown.Item onClick={onClickMenu} >글제목</Dropdown.Item>
+        <Dropdown.Item onClick={onClickMenu}>작성자</Dropdown.Item>
+        <Dropdown.Item onClick={onClickMenu}>글내용</Dropdown.Item>
       </DropdownButton>
       
       <Form.Control aria-label="Text input with dropdown button" />

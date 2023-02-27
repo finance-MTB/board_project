@@ -6,11 +6,18 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 const data = createSlice({
   name: 'data',
   initialState : [
+  //   {
+  //   id: 0,
+  //   title: 1,
+  //   user: 1,
+  //   content: 1,
+  //   date: 2023,
+  // }
   ],
   reducers : {
     addData(state, action){
       state.push(action.payload);
-      //console.log(state)
+      
     }
   }
 });
@@ -21,7 +28,7 @@ const boardid = createSlice({
   reducers : {
     addID(state){
       state.id += 1
-      console.log(state.id)
+      //console.log(state.id)
     }
   }
 })
