@@ -9,7 +9,9 @@ import { Link } from 'react-router-dom';
 const SearchandWrite = (
   {
   onClickMenu,
-  menu
+  menu,
+  onChangeSearchWord,
+  onClickSearchBtn
 }
 ) => (
   <div>
@@ -24,8 +26,8 @@ const SearchandWrite = (
         <Dropdown.Item onClick={onClickMenu}>글내용</Dropdown.Item>
       </DropdownButton>
       
-      <Form.Control aria-label="Text input with dropdown button" />
-      <Button variant="outline-dark">Search</Button>
+      <Form.Control aria-label="Text input with dropdown button" onChange={onChangeSearchWord}/>
+      <Button variant="outline-dark" onClick={onClickSearchBtn}>Search</Button>
     </InputGroup>
     <Link to='/write'><Button className='float-right' variant="outline-dark">글쓰기</Button></Link>
   </div>

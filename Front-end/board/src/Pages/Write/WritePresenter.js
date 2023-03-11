@@ -37,6 +37,7 @@ const WritePresenter = ({
           <Form.Group className="mb-3" controlId="formGridAddress1">
             <Form.Label>내용</Form.Label>
             <Form.Control
+            
               style={{ height: "300px" }}
               as="textarea"
               placeholder="게시글 작성"
@@ -44,11 +45,11 @@ const WritePresenter = ({
             />
           </Form.Group>
 
-          <Link to="/board">
-            <Button variant="primary" onClick={onClickAddBtn}>
-              글쓰기
-            </Button>
-          </Link>
+        
+          <Button variant="primary" onClick={onClickAddBtn}>
+            글쓰기
+          </Button>
+        
         </Form>
       </div>
     </div>

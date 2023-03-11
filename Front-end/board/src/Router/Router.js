@@ -5,9 +5,9 @@ import Write from "../Pages/Write";
 import BoardView from '../Pages/BoardView';
 
 function Router() {
-  const navigte = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
-    navigte("/board");
+    navigate("/board");
   }, []);
 
   return (

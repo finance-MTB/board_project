@@ -9,7 +9,9 @@ const BoardPresenter = ({
   currentBoardlist,
   currentPage,
   onClickMenu,
-  menu
+  menu,
+  onChangeSearchWord,
+  onClickSearchBtn
 }) => (
   <div className="App">
     <div className="grey-bg">
@@ -17,7 +19,7 @@ const BoardPresenter = ({
         <Header boardlist={boardlist} />
         <BoardTable currentBoardlist={currentBoardlist} navigateView={navigateView}/>
         <PaginationBar currentPage={currentPage} pageNumbers={pageNumbers} onClickPageNum={onClickPageNum}/>
-        <SearchandWrite menu={menu} onClickMenu={onClickMenu}/>
+        <SearchandWrite onClickSearchBtn={onClickSearchBtn} onChangeSearchWord={onChangeSearchWord} menu={menu} onClickMenu={onClickMenu}/>
       </div>
     </div>
   </div>
